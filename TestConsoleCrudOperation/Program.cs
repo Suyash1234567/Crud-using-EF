@@ -11,54 +11,51 @@ namespace TestConsoleCrudOperation
         static void Main(string[] args)
         {
             Program program = new Program();
-            //program.Menu();
-            Console.WriteLine("Enter 1 to Create new course record \n" +
-                "Enter 2 to Create new student record \n" +
-                "Enter 3 to Retrieve student record \n" +
-                "Enter 4 to Update student record \n" +
-                "Enter 5 to Delete student record \n" +
-                "Enter 6 to exit");
-            string userChoice = Console.ReadLine();
-            int userInput = Convert.ToInt32(userChoice);
             bool isCheck = true;
-            while (isCheck)
+            do
             {
+                //string userChoice = Console.ReadLine();
+                int userInput = program.Menu();
+                
                 if (userInput == 1)
                 {
                     program.AddCourse();
-                    Console.ReadLine();
+                    Console.WriteLine("------- Course Added ------");
+                    //Console.ReadLine();
                 }
                 if (userInput == 2)
                 {
                     program.CreateStudent();
-                    Console.ReadLine();
+                    Console.WriteLine("------- Student Created ------");
+
+                    // Console.ReadLine();
                 }
                 if (userInput == 3)
                 {
                     program.RetrieveStudent();
-                    Console.ReadLine();
+                    Console.WriteLine("------- Retrived Student ------");
+
+                    //Console.ReadLine();
                 }
                 if (userInput == 4)
                 {
                     program.UpdateStudent();
-                    Console.ReadLine();
+                    Console.WriteLine("------- Student Updated ------");
+
+                    //Console.ReadLine();
                 }
                 if (userInput == 5)
                 {
                     program.DeleteStudent();
-                    Console.ReadLine();
+                    Console.WriteLine("------- Student Deleted ------");
+
+                    //Console.ReadLine();
                 }
                 if (userInput == 6)
                 {
                     isCheck = false;
                 }
-            }
-
-            //CreateStudent();
-            //RetrieveStudent();
-            //UpdateStudent();
-            //DeleteStudent();
-            //Console.ReadLine();
+            }while (isCheck) ;
         }
 
         public int Menu()
@@ -95,6 +92,7 @@ namespace TestConsoleCrudOperation
             using (StudentModel model = new StudentModel())
             {
                 Console.WriteLine("Enter student name");
+
                 string SName = Console.ReadLine();
                 Console.WriteLine("Enter student class");
                 string StudentChoice1 = Console.ReadLine();
@@ -114,6 +112,8 @@ namespace TestConsoleCrudOperation
                     StudentClass = SClass,
                     CourseId = courseId
                 };
+                model.Students.Add(student);
+                model.SaveChanges();
             }
         }
 
@@ -126,7 +126,7 @@ namespace TestConsoleCrudOperation
                 Console.WriteLine(student.StudentId);
                 Console.WriteLine(student.StudentName);
                 Console.WriteLine(student.StudentClass);
-                Console.ReadLine();
+                //Console.ReadLine();
             }
         }
 
@@ -161,8 +161,9 @@ namespace TestConsoleCrudOperation
                 else
                 {
                     Console.WriteLine("Student ID not Found ");
-                    model.SaveChanges();
+                    
                 }
+                model.SaveChanges();
             }
         }
 
@@ -183,10 +184,6 @@ namespace TestConsoleCrudOperation
                 }
                 model.SaveChanges();
             }
-            //StudentModel context = new StudentModel();
-            //var student = context.Students.FirstOrDefault(s => s.StudentName == "Yash");
-            //context.Students.Remove(student);
-            //context.SaveChanges();
         }
 
 
