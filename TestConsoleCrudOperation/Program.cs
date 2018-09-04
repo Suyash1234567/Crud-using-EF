@@ -134,21 +134,59 @@ namespace TestConsoleCrudOperation
         {
             using (StudentModel model = new StudentModel())
             {
-                StudentModel context = new StudentModel();
-                var student = context.Students.FirstOrDefault();
-                Console.WriteLine("Enter name to be changed");
-                string SName = Console.ReadLine();
-                student.StudentName = SName;
-                context.SaveChanges();
+                Console.WriteLine("Enter Student ID for update");
+                string SId = Console.ReadLine();
+                int StId = Convert.ToInt32(SId);
+                StudentViewModel student = model.Students.Where(s => s.StudentId == StId).FirstOrDefault();
+                if (student != null)
+                {
+                    Console.Write("Enter Student Name: ");
+                    string studentName = Console.ReadLine();
+                    Console.WriteLine("Enteer Student class");
+                    string stClass = Console.ReadLine();
+                    int studentClass = Convert.ToInt32(stClass);
+
+                    Console.WriteLine("Enter your choice: ");
+                    foreach (var item in model.Courses)
+                    {
+                        Console.WriteLine(item.CourseName + "   For   " + item.CourseId);
+
+                    }
+                    int courseID = Convert.ToInt32(Console.ReadLine());
+
+                    student.StudentName = studentName;
+                    student.StudentClass = studentClass;
+                    student.CourseId = courseID;
+                }
+                else
+                {
+                    Console.WriteLine("Student ID not Found ");
+                    model.SaveChanges();
+                }
             }
         }
 
         private void DeleteStudent()
         {
-            StudentModel context = new StudentModel();
-            var student = context.Students.FirstOrDefault(s => s.StudentName == "Yash");
-            context.Students.Remove(student);
-            context.SaveChanges();
+            using (StudentModel model = new StudentModel())
+            {
+                Console.Write("Enter Student ID  :  ");
+                int StId = Convert.ToInt32(Console.ReadLine());
+                StudentViewModel student = model.Students.Where(x => x.StudentId == StId).FirstOrDefault();
+                if (student != null)
+                {
+                    model.Students.Remove(student);
+                }
+                else
+                {
+                    Console.WriteLine("Student ID not Found ");
+                }
+                model.SaveChanges();
+            }
+            //StudentModel context = new StudentModel();
+            //var student = context.Students.FirstOrDefault(s => s.StudentName == "Yash");
+            //context.Students.Remove(student);
+            //context.SaveChanges();
         }
 
 
