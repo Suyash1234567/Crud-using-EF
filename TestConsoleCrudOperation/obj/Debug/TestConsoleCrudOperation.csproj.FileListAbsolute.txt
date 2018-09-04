@@ -1,0 +1,12 @@
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\obj\Debug\TestConsoleCrudOperation.csprojAssemblyReference.cache
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\obj\Debug\TestConsoleCrudOperation.csproj.CoreCompileInputs.cache
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\bin\Debug\TestConsoleCrudOperation.exe.config
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\bin\Debug\TestConsoleCrudOperation.exe
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\bin\Debug\TestConsoleCrudOperation.pdb
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\bin\Debug\EntityFramework.dll
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\bin\Debug\EntityFramework.xml
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\obj\Debug\TestConsoleCrudOperation.csproj.CopyComplete
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\obj\Debug\TestConsoleCrudOperation.exe
+C:\Users\Vivek\Desktop\DotNet\CRUD ON CONSOLE\TestConsoleCrudOperation\TestConsoleCrudOperation\obj\Debug\TestConsoleCrudOperation.pdb
